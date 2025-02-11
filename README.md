@@ -12,7 +12,7 @@
 - As a customer, I want to register an account to browse the items I want.
 - As a seller, I want to register an account to be able to sell.
 
-### Team Members
+### Team Members hehehehehehe
 
 #### Project Manager
 - De Belen, Alloizeus John B.

@@ -1,0 +1,58 @@
+MYSQL
+
+
+How to access MySQL shell?
+
+In VSCODE Terminal type:
+
+mysqlsh —sql
+
+— after connecting to sqlshell
+
+you connect the root@localhost 
+
+\connect root@localhost
+
+use the Database name quickbuy_db
+
+USE quickbuy_db;
+
+after check the table 
+
+SHOW TABLES;
+
+// View all records from users
+SELECT * FROM users;
+
+
+This is use to tell the terminal to execute the schema.sql file 
+mysql -u root -h localhost quickbuy_db < backend/database/schema.sql
+
+- mysql -u root → Logs into MySQL as root.
+
+- -h localhost → Connects to the local MySQL server.
+
+- quickbuy_db → Specifies the database.
+
+- < backend/database/schema.sql → Tells MySQL to execute the SQL file.
+
+
+
+
+How to run my Backend (TYPESCRIPT + EXPRESS)
+
+  # If app.ts is inside a src folder
+npx ts-node src/app.ts
+ 
+How to access MySQL shell?
+
+In VSCODE Terminal type:
+
+mysqlsh —sql 
+\connect root@localhost
+
+USE quickbuy_db;
+
+SHOW TABLES;
+
+SELECT * FROM users;

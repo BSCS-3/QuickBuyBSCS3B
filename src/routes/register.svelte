@@ -3,6 +3,7 @@
   
   let role = "customer";
   let username = "";
+  let shopname = "";
   let email = "";
   let password = "";
   let confirmPassword = "";
@@ -37,6 +38,7 @@
       alert("Registration successful!");
       
       // Clear the input fields
+      shopname = "";
       username = "";
       email = "";
       password = "";
@@ -75,6 +77,7 @@
       </button>
     </div>
 
+    <input type="text" placeholder="shop name" bind:value={shopname} class="w-full mb-2 p-2 border rounded" />
     <input type="text" placeholder="Username" bind:value={username} class="w-full mb-2 p-2 border rounded" />
     <input type="email" placeholder="Email" bind:value={email} class="w-full mb-2 p-2 border rounded" />
     <input type="password" placeholder="Password" bind:value={password} class="w-full mb-2 p-2 border rounded" />

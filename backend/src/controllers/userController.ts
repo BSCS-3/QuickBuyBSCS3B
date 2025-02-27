@@ -186,3 +186,45 @@ export const logoutUser = (req: RequestWithSession, res: Response) => {
     res.status(500).json({ message: "Server error during logout" });
   }
 };
+
+// Getting all the users
+export const getAllUsers = async (req: Request, res: Response) => {
+  try {
+    const [rows] = await pool.query<RowDataPacket[] & User[]>(
+      "SELECT id, username, email, role FROM users"
+    );
+    res.json({ users: rows });
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    res.status(500).json({ message: "Server error while retrieving users! " });
+  }
+};
+
+export const getUsersByRole = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  try {
+    const { role } = req.params; // Extract the role from URL params
+
+    // Execute the SQL query to fetch users with the specified role
+    const [rows] = await pool.query<RowDataPacket[] & User[]>(
+      "SELECT id, username, email, role FROM users WHERE role = ?",
+      [role] // Parameterized query to prevent SQL injection
+    );
+
+    // Check if users exist with the given role
+    if (rows.length === 0) {
+      res.status(404).json({ message: `No users found with role: ${role}` });
+      return; // Ensure function exits after sending a response
+    }
+
+    // Send the filtered users as JSON
+    res.json({ users: rows });
+  } catch (error) {
+    console.error("Error fetching users by role:", error);
+    res
+      .status(500)
+      .json({ message: "Server error while retrieving users by role." });
+  }
+};

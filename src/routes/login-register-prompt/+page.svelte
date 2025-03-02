@@ -49,7 +49,7 @@
 {/if}
 
 {#if showModal}
-    <div class="fixed inset-0 flex items-center justify-center" style="background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); z-index: 999;">
+    <div class="fixed inset-0 flex items-center justify-center" style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); z-index: 999;">
         <div class="bg-white p-8 rounded-lg shadow-lg text-center" style="width: 558px; height: 425px; display: flex; flex-direction: column; justify-content: space-between;">
             <h3 class="text-[60px] font-[500] text-[#21463E] font-dm-sans mt-13">Don't have an</h3>
             <h3 class="text-[60px] font-[500] text-[#21463E] font-dm-sans" style="margin-top: -100px; margin-bottom: -50px">account yet?</h3>

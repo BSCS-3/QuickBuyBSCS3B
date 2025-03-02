@@ -1,5 +1,5 @@
 <script>
-    import Login from "./login/+page.svelte";
+    import LoginRegisterPrompt from "./login-register-prompt/+page.svelte";
 </script>
 
-<Login />
+<LoginRegisterPrompt />

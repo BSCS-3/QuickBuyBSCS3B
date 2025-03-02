@@ -48,7 +48,7 @@ export const deleteUser = async (req: Request, res: Response): Promise<void> => 
   }
 };
 
-export const delSeller = async (req: Request, res: Response): Promise <void> => {
+export const deleteSeller = async (req: Request, res: Response): Promise <void> => {
   const sellerId = req.params.id;
 
   try {

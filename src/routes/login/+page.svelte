@@ -25,7 +25,7 @@
             goto("/admin/account-management/customer");
             break;
           case "customer":
-            goto("/customer");
+            goto("/customer/profile");
             break;
           case "seller":
             goto("/seller");

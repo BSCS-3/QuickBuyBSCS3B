@@ -97,7 +97,7 @@
                     <p class="text-[#21463E]">{formatDate(user.created_at)}</p>
                 </div>
                 <div class="flex items-center text-sm p-1 w-1/3">
-                    <button class="bg-[#FDEBEC] text-[#D44C47] px-4 py-2 rounded-lg text-xs w-30 cursor-pointer hover:bg-[#D44C47]/20"
+                    <button class="bg-[#FDEBEC] text-[#D44C47] px-4 py-2 rounded-lg text-xs w-full cursor-pointer hover:bg-[#D44C47]/20"
                         on:click={() => handleDelete(user.id)} 
                         disabled={deleteLoading} >
                         {deleteLoading ? "deleting..." : "delete"}

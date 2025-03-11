@@ -37,7 +37,8 @@
             Log Out
         </button>
     </header>
-    <div>
-        <p>welcome to customer page.</p>
-    </div>
+    
+    <slot>
+      <!-- content goes here -->
+    </slot>
 </main>

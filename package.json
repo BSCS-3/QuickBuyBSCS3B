@@ -51,6 +51,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@types/jsonwebtoken": "^9.0.9",
 		"quickbuybscs3b": "file:"
 	}
 }
